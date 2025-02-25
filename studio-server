@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>studio-server</Name>
+  <Name>WireBear-Studio-Server</Name>
   <Repository>allebb/studio-server:latest</Repository>
   <Registry>https://hub.docker.com/</Registry>
   <Network>bridge</Network>
