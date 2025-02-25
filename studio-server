@@ -11,7 +11,7 @@
   </Overview>
   <Category>Utility</Category>
   <WebUI>http://[IP]:[PORT:8543]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/your-username/your-repo/master/unraid-template.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/cryd-s/unraidtemplates/refs/heads/main/studio-server.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/cryd-s/unraidtemplates/refs/heads/main/imgs/studio-server.png</Icon>
   <Config>
     <Volume Type="Path" Display="Hooks Directory" Target="/var/studio-server/hooks/" Default="/mnt/user/appdata/studio-server/hooks/" Mode="rw" Description="Verzeichnis für Hooks" />
