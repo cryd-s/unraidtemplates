@@ -12,7 +12,7 @@
   <Category>Utility</Category>
   <WebUI>http://[IP]:[PORT:8543]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/your-username/your-repo/master/unraid-template.xml</TemplateURL>
-  <Icon>https://wirebear.co.uk/img/wb_white.svg</Icon>
+  <Icon>https://raw.githubusercontent.com/cryd-s/unraidtemplates/refs/heads/main/imgs/studio-server.png</Icon>
   <Config>
     <Volume Type="Path" Display="Hooks Directory" Target="/var/studio-server/hooks/" Default="/mnt/user/appdata/studio-server/hooks/" Mode="rw" Description="Verzeichnis für Hooks" />
     <Volume Type="Path" Display="Database Directory" Target="/var/studio-server/database/" Default="/mnt/user/appdata/studio-server/database/" Mode="rw" Description="Verzeichnis für die Datenbank" />
