@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>studio-server</Name>
+  <Repository>allebb/studio-server:latest</Repository>
+  <Registry>https://hub.docker.com/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/allebb/studio-server/issues</Support>
+  <Overview>
+    WireBear Studio Server ist eine leistungsstarke Plattform zur Verwaltung und Automatisierung von Studio-Produktionen. Die Software bietet umfassende Tools für die Planung, Steuerung und Überwachung von Studio-Sessions, einschließlich der Integration von Hooks, Datenbanken und Backup-Lösungen. Mit Unterstützung für Cron-Jobs und einer benutzerfreundlichen Web-Oberfläche ermöglicht der Studio Server eine effiziente Verwaltung von Produktionsworkflows und stellt sicher, dass alle Prozesse reibungslos ablaufen. Ideal für professionelle Studios, die eine zuverlässige und skalierbare Lösung zur Automatisierung und Organisation ihrer Produktionen suchen.
+  </Overview>
+  <Category>Utility</Category>
+  <WebUI>http://[IP]:[PORT:8543]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/your-username/your-repo/master/unraid-template.xml</TemplateURL>
+  <Icon>https://wirebear.co.uk/img/wb_white.svg</Icon>
+  <Config>
+    <Volume Type="Path" Display="Hooks Directory" Target="/var/studio-server/hooks/" Default="/mnt/user/appdata/studio-server/hooks/" Mode="rw" Description="Verzeichnis für Hooks" />
+    <Volume Type="Path" Display="Database Directory" Target="/var/studio-server/database/" Default="/mnt/user/appdata/studio-server/database/" Mode="rw" Description="Verzeichnis für die Datenbank" />
+    <Volume Type="Path" Display="Backups Directory" Target="/var/studio-server/backups/" Default="/mnt/user/appdata/studio-server/backups/" Mode="rw" Description="Verzeichnis für Backups" />
+    <Volume Type="Path" Display="Cron Jobs Directory" Target="/etc/cron.d/" Default="/mnt/user/appdata/studio-server/jobs/" Mode="rw" Description="Verzeichnis für Cron-Jobs" />
+  </Config>
+  <Environment>
+    <Variable Name="TZ" Value="Europe/Berlin" Mode="rw" Description="Zeitzone" />
+  </Environment>
+  <Ports>
+    <Port Name="PostgreSQL Port" Target="5432" Default="5432" Mode="tcp" Description="Port für PostgreSQL - nicht verändern" />
+    <Port Name="Custom Port 50059" Target="50059" Default="50059" Mode="tcp" Description="Benutzerdefinierter Port 50059" />
+    <Port Name="WebUI Port" Target="8543" Default="8543" Mode="tcp" Description="Port für die Web-Oberfläche" />
+  </Ports>
+</Container>
